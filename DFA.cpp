@@ -1,5 +1,5 @@
 // C++ Program to implement DFA Accepting the Language  L = {aNbM | N ≥ 0, M ≥ 0, N+M ≥ 1}. , 
-//i.e.,regular language L such that all ‘a’ occur before the first occurrence of ‘b’ {a, ab, aab, bb…, }.
+//i.e.,regular language L such that all ‘a’ occur before the first occurrence of ‘b’ {a, ab, aab, bb…, }
 #include <iostream>
 using namespace std;
 

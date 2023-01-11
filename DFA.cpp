@@ -5,50 +5,81 @@ using namespace std;
 
 // Function for state zero Q0
 int startStateQ0(char s) {
+	cout<<"From State q0  ";
 	
 	int state;
-	if (s == 'a')
+	if (s == 'a'){
+		cout<<"Read an 'a' and went to state q1\n";	
 		state = 1;
-	else if (s == 'b')
+	}
+	else if (s == 'b'){
+		cout<<"Read an 'b' and went to state q2\n";
 		state = 2;
-	else
-		state = -1;
+	}
+	else{
+		cout<<"Invalid input\n";
+	}
 
 	return state;
 }
 		
 // Function for first state Q1
 int firstStateQ1(char s) {
+	cout<<"From state q1  ";
+
 	
 	int state;
-	if (s == 'a')
+	if (s == 'a'){
+		cout<<"Read an 'a' and remains in state q1\n";
 		state = 1;
-	else if (s == 'b')
+	}
+	else if (s == 'b'){
+		cout<<"Read an 'b' and went to state q2\n";
 		state = 2;
-	else
-		state = -1;
+	}
+	else{
+		cout<<"Invalid input\n";
+	}
 		
 	return state;
 }
 		
 // Function for second state Q2
 int secondStateQ2(char s) {
-	
+	cout<<"From state q2  ";
+
 	int state;
-	if (s == 'b')
+	if (s == 'b'){
+		cout<<"Read an 'b' and remains in state q2\n";
 		state = 2;
-	else if (s == 'a')
+	}
+	else if (s == 'a'){
+		cout<<"Read an 'a' and went to state q3\n";
 		state = 3;
-	else
-		state = -1;
+	}
+	else{
+		cout<<"Invalid input\n";
+	}
 		
 	return state;
 }
 		
 // Function for third state Q3
 int thirdStateQ3(char s) {
+	cout<<"From state q3  ";
 	
-	int state = 3;
+	int state;
+	if (s == 'b'){
+		cout<<"Read an 'b' and remains in state q3\n";
+	    state = 3;
+	}
+	else if (s == 'a'){
+		cout<<"Read an 'a' and remains in state q3\n";
+		state = 3;
+	}
+	else{
+		cout<<"Invalid input\n";
+	}
 	return state;
 }
 		
@@ -81,9 +112,11 @@ int isAcceptedString(string String) {
 
 int main() {
 	
-	string String = "ba";
+	string String;
+	cout<<"Enter a string for the DFA"<<endl;
+	cin>>String;
 	if (isAcceptedString(String))
-		cout << "ACCEPTED";
+		cout << "\nACCEPTED";
 	else
-		cout << "NOT ACCEPTED";
+		cout << "\nNOT ACCEPTED";
 }	
